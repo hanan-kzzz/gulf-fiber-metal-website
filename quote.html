@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1a2120">
+  <meta name="description" content="Interactive Engineering Quotation and Cost Estimation Generator for GRP architectural cladding, column covers, water tanks, and custom composite structures in Riyadh.">
+  <title>Engineering Quotation &amp; Cost Estimator | Gulf Fiber &amp; Metal Co. Ltd.</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <!-- Topline Information Strip -->
+  <div class="topline">
+    <div class="wrap">
+      <div>
+        <span data-en="Engineering Materials • Architectural Solutions" data-ar="مواد هندسية متطورة • حلول معمارية مبتكرة">Engineering Materials • Architectural Solutions</span>
+        <span style="opacity: 0.4; margin: 0 8px;">|</span>
+        <span data-en="Riyadh Facility &bull; Al Farazdaq St." data-ar="مصنع الرياض &bull; شارع الفرزدق">Riyadh Facility &bull; Al Farazdaq St.</span>
+      </div>
+      <div class="topline-contact">
+        <a href="tel:+966110000000"><span>Tel: +966 11 000 0000</span></a>
+        <a href="https://wa.me/966500000000" target="_blank" rel="noopener"><span>WhatsApp: +966 50 000 0000</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <nav class="nav wrap">
+      <a class="brand" href="index.html" aria-label="Gulf Fiber and Metal home">
+        <img src="assets/nahas-malee-logo.jpg" alt="Nahas Malee - Gulf Fiber & Metal Logo">
+        <div class="brandtext">
+          <strong>GULF FIBER &amp; METAL</strong>
+          <small>COMPANY LIMITED • NAHAS MALEE</small>
+        </div>
+      </a>
+      
+      <button class="menu" data-menu aria-label="Open menu" aria-expanded="false">☰</button>
+      
+      <div class="links" data-links>
+        <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+        <a href="about.html" data-en="About" data-ar="عن الشركة">About</a>
+        <a href="products.html" data-en="Products" data-ar="المنتجات">Products</a>
+        <a href="industries.html" data-en="Industries" data-ar="القطاعات">Industries</a>
+        <a href="manufacturing.html" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a>
+        <a href="projects.html" data-en="Projects" data-ar="المشاريع">Projects</a>
+        <a href="quote.html" class="active" data-en="Quote" data-ar="طلب تسعيرة">Quote</a>
+        <a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <div class="lang-toggle" aria-label="Language selector">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="ar">عربي</button>
+        </div>
+        <a class="navcta" href="quote.html">
+          <span data-en="Request a quote ↗" data-ar="طلب عرض سعر ↗">Request a quote ↗</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="breadcrumb">
+          <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+          <span>/</span>
+          <span data-en="Quotation Tool" data-ar="حاسبة التقدير">Quotation Tool</span>
+        </div>
+        <div class="kicker" data-en="Interactive Engineering Estimator" data-ar="حاسبة التقدير والتسعير التفاعلية">Interactive Engineering Estimator</div>
+        <h1 data-en="Calculate Technical Specifications<br><em>&amp; Receive a Formal Commercial Proposal.</em>" data-ar="حدد المواصفات الهندسية<br><em>واحصل على عرض فني ومالي فوري.</em>">Calculate Technical Specifications<br><em>&amp; Receive a Formal Commercial Proposal.</em></h1>
+        <p data-en="Select your composite product line, required surface quantity, resin matrix requirements, and finishes. Our estimating engine prepares a direct specification summary dispatched instantly to our Riyadh technical desk." data-ar="حدد نوع منتج الفيبرجلاس والمساحة المطلوبة ونوع الراتنج ومستوى مقاومة الحريق. ستقوم الأداة بإعداد ملخص فني شامل يتم إرساله مباشرة لمكتب التقديرات الهندسية بالرياض.">Select your composite product line, required surface quantity, resin matrix requirements, and finishes. Our estimating engine prepares a direct specification summary dispatched instantly to our Riyadh technical desk.</p>
+      </div>
+    </section>
+
+    <!-- Interactive Quotation Engine Section -->
+    <section class="section">
+      <div class="wrap">
+        <div class="quote-grid">
+          <!-- Left: Specification Form & Parameters -->
+          <div class="calc-box reveal">
+            <h2 style="font: 700 22px 'Manrope'; margin: 0 0 8px;" data-en="Step 1: Project &amp; Material Parameters" data-ar="الخطوة 1: معايير المشروع والمواصفات">Step 1: Project &amp; Material Parameters</h2>
+            <p style="font-size: 13px; color: #5f6b67; margin-bottom: 24px;" data-en="Configure the structural parameters for your composite package." data-ar="حدد المتطلبات الإنشائية لحزمة الألياف المركبة الخاصة بمشروعك.">Configure the structural parameters for your composite package.</p>
+
+            <form id="quoteCalculatorForm">
+              <!-- Product Line Selection -->
+              <div style="margin-bottom: 20px;">
+                <label style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: #222c2a; margin-bottom: 8px;" for="quoteProduct" data-en="Composite Product System *" data-ar="نظام منتج الفيبرجلاس *">Composite Product System *</label>
+                <select id="quoteProduct" style="width: 100%; border: 1px solid var(--line); background: var(--paper); padding: 13px; font: 13px 'DM Sans';">
+                  <option value="grp-traditional-cladding" selected>GRP Traditional &amp; Heritage Cladding Panels</option>
+                  <option value="grp-pillar-covers">GRP Architectural Pillar &amp; Column Covers</option>
+                  <option value="grp-facade-elements">GRP 3D Facade &amp; Mashrabiya Sunshade Screens</option>
+                  <option value="grp-canopies-underpass">GRP Architectural Canopies &amp; Underpass Wall Cladding</option>
+                  <option value="grp-sectional-water-tanks">GRP Sectional Panel Water Storage Tanks</option>
+                  <option value="grp-custom-fabrication">Custom Engineered GRP Fabrications &amp; Tooling</option>
+                  <option value="grp-gratings-drainage">Heavy-Duty GRP Industrial Gratings &amp; Trench Covers</option>
+                  <option value="grp-domes-cornices">Architectural GRP Domes, Cornices &amp; Parapets</option>
+                </select>
+              </div>
+
+              <div class="form-grid-2">
+                <!-- Quantity / Area -->
+                <div style="margin-bottom: 20px;">
+                  <label style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: #222c2a; margin-bottom: 8px;" for="quoteQuantity" data-en="Estimated Quantity / Area *" data-ar="الكمية / المساحة التقديرية *">Estimated Quantity / Area *</label>
+                  <input type="number" id="quoteQuantity" value="500" min="10" max="50000" style="width: 100%; border: 1px solid var(--line); background: var(--paper); padding: 13px; font: 13px 'DM Sans';" placeholder="e.g. 500">
+                  <small id="quoteUnitLabel" style="font-size: 11px; color: #6b7773; display: block; margin-top: 4px;">Square Meters (m²)</small>
+                </div>
+
+                <!-- Resin Matrix Formulation -->
+                <div style="margin-bottom: 20px;">
+                  <label style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: #222c2a; margin-bottom: 8px;" for="quoteResin" data-en="Resin Matrix System" data-ar="نظام الراتنج المطلوب">Resin Matrix System</label>
+                  <select id="quoteResin" style="width: 100%; border: 1px solid var(--line); background: var(--paper); padding: 13px; font: 13px 'DM Sans';">
+                    <option value="Isophthalic UV-Stabilized" selected>Isophthalic (UV &amp; Weather Resistant)</option>
+                    <option value="Vinyl Ester Flame Class 1">Vinyl Ester (Severe Chemical &amp; Fire Class 1)</option>
+                    <option value="Food-Grade Potable (WRAS)">Food-Grade Potable Gelcoat (WRAS / SASO)</option>
+                    <option value="Standard Orthophthalic">Standard Architectural Orthophthalic</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <!-- Finish Texture -->
+                <div style="margin-bottom: 20px;">
+                  <label style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: #222c2a; margin-bottom: 8px;" for="quoteFinish" data-en="Surface Finish &amp; Texture" data-ar="التشطيب السطحي والملمس">Surface Finish &amp; Texture</label>
+                  <select id="quoteFinish" style="width: 100%; border: 1px solid var(--line); background: var(--paper); padding: 13px; font: 13px 'DM Sans';">
+                    <option value="Textured Heritage Sand">Textured Heritage Sand / Limestone</option>
+                    <option value="High-Gloss Mirror Gelcoat">High-Gloss Mirror Gelcoat (Seamless)</option>
+                    <option value="Matte Architectural Satin">Matte Architectural Satin (Low Glare)</option>
+                    <option value="Metallic Mica Gold / Bronze">Metallic Mica Gold / Bronze Effect</option>
+                  </select>
+                </div>
+
+                <!-- Project Location -->
+                <div style="margin-bottom: 20px;">
+                  <label style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: #222c2a; margin-bottom: 8px;" for="quoteLocation" data-en="Project Region" data-ar="منطقة المشروع">Project Region</label>
+                  <select id="quoteLocation" style="width: 100%; border: 1px solid var(--line); background: var(--paper); padding: 13px; font: 13px 'DM Sans';">
+                    <option value="Riyadh Province" selected>Riyadh Province (Central)</option>
+                    <option value="Western Province (Jeddah / Makkah)">Western Province (Jeddah / Makkah / Madinah)</option>
+                    <option value="Eastern Province (Dammam / Khobar / Jubail)">Eastern Province (Dammam / Jubail)</option>
+                    <option value="North / Neom / Red Sea">North / Neom / Red Sea Projects</option>
+                    <option value="Southern Province">Southern Province</option>
+                    <option value="GCC Neighboring Countries">GCC Export (UAE, Kuwait, Qatar, Bahrain, Oman)</option>
+                  </select>
+                </div>
+              </div>
+
+              <h2 style="font: 700 22px 'Manrope'; margin: 28px 0 8px; border-top: 1px solid var(--line); padding-top: 24px;" data-en="Step 2: Client &amp; Contractor Details" data-ar="الخطوة 2: بيانات العميل والمشروع">Step 2: Client &amp; Contractor Details</h2>
+              
+              <div class="form-grid-2">
+                <div>
+                  <label style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: #222c2a; margin-bottom: 8px;" for="clientName" data-en="Full Name *" data-ar="الاسم الكامل *">Full Name *</label>
+                  <input type="text" id="clientName" required style="width: 100%; border: 1px solid var(--line); background: var(--paper); padding: 13px; font: 13px 'DM Sans';" placeholder="Eng. Fahad Al-Mansoor">
+                </div>
+
+                <div>
+                  <label style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: #222c2a; margin-bottom: 8px;" for="clientCompany" data-en="Company / Consultant Name" data-ar="اسم الشركة أو المكتب الاستشاري">Company / Consultant Name</label>
+                  <input type="text" id="clientCompany" style="width: 100%; border: 1px solid var(--line); background: var(--paper); padding: 13px; font: 13px 'DM Sans';" placeholder="Saudi Contracting Co.">
+                </div>
+              </div>
+
+              <div class="form-grid-2" style="margin-top: 16px;">
+                <div>
+                  <label style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: #222c2a; margin-bottom: 8px;" for="clientEmail" data-en="Work Email Address *" data-ar="البريد الإلكتروني للعمل *">Work Email Address *</label>
+                  <input type="email" id="clientEmail" required style="width: 100%; border: 1px solid var(--line); background: var(--paper); padding: 13px; font: 13px 'DM Sans';" placeholder="fahad@company.sa">
+                </div>
+
+                <div>
+                  <label style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: #222c2a; margin-bottom: 8px;" for="clientPhone" data-en="Mobile / WhatsApp *" data-ar="رقم الجوال / الواتساب *">Mobile / WhatsApp *</label>
+                  <input type="tel" id="clientPhone" required style="width: 100%; border: 1px solid var(--line); background: var(--paper); padding: 13px; font: 13px 'DM Sans';" placeholder="+966 5X XXX XXXX">
+                </div>
+              </div>
+
+              <div style="margin-top: 16px;">
+                <label style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: #222c2a; margin-bottom: 8px;" for="projectNotes" data-en="Project Scope &amp; Special Dimensions" data-ar="نطاق المشروع والملاحظات الإضافية">Project Scope &amp; Special Dimensions</label>
+                <textarea id="projectNotes" style="width: 100%; border: 1px solid var(--line); background: var(--paper); padding: 13px; font: 13px 'DM Sans'; min-height: 80px;" placeholder="Please detail panel module sizes, structural fixing preferences, or project timeline..."></textarea>
+              </div>
+
+              <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+                <button type="button" id="btnSendWhatsApp" class="btn" style="background: #25D366; flex: 1;">
+                  <span data-en="Send Spec to WhatsApp Desk ↗" data-ar="إرسال عبر الواتساب للمهندس ↗">Send Spec to WhatsApp Desk ↗</span>
+                </button>
+                <button type="submit" id="btnSendEmail" class="btn" style="flex: 1;">
+                  <span data-en="Generate Formal RFQ Email ↗" data-ar="إرسال طلب تسعيرة رسمي ↗">Generate Formal RFQ Email ↗</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right: Live Specification Summary Card -->
+          <div class="summary-card reveal">
+            <h3 data-en="Live Technical Estimation" data-ar="ملخص التقدير الفني المباشر">Live Technical Estimation</h3>
+            
+            <div class="summary-row">
+              <span data-en="Selected System:" data-ar="النظام المختار:">Selected System:</span>
+              <span id="sumProductTitle">GRP Cladding Panels</span>
+            </div>
+
+            <div class="summary-row">
+              <span data-en="Scope / Area:" data-ar="الكمية / المساحة:">Scope / Area:</span>
+              <span id="sumQuantity">500 m²</span>
+            </div>
+
+            <div class="summary-row">
+              <span data-en="Resin Chemistry:" data-ar="تركيبة الراتنج:">Resin Chemistry:</span>
+              <span id="sumResin">Isophthalic UV-Stabilized</span>
+            </div>
+
+            <div class="summary-row">
+              <span data-en="Surface Finish:" data-ar="التشطيب السطحي:">Surface Finish:</span>
+              <span id="sumFinish">Textured Heritage Sand</span>
+            </div>
+
+            <div class="summary-row">
+              <span data-en="Project Destination:" data-ar="وجهة التوريد:">Project Destination:</span>
+              <span id="sumLocation">Riyadh Province</span>
+            </div>
+
+            <div class="summary-row">
+              <span data-en="Dead-Load Saving:" data-ar="توفير الأحمال:">Dead-Load Saving:</span>
+              <span style="color: #4ade80;">Up to 75% vs Concrete</span>
+            </div>
+
+            <div class="summary-row">
+              <span data-en="Est. Production Lead Time:" data-ar="المدة التقديرية للإنتاج:">Est. Production Lead Time:</span>
+              <span id="sumLeadTime">10 &ndash; 16 Business Days</span>
+            </div>
+
+            <div class="summary-total">
+              <span data-en="Estimated Cost Band:" data-ar="النطاق التقديري:">Estimated Cost Band:</span>
+              <strong id="sumCostBand">Factory Direct</strong>
+            </div>
+
+            <div style="margin-top: 24px; padding: 18px; background: rgba(255, 255, 255, 0.05); font-size: 11px; line-height: 1.7; color: #a2b2ad;">
+              <div style="font-weight: 700; color: #fff; margin-bottom: 4px;" data-en="What Happens Next:" data-ar="ما هي الخطوات التالية:">What Happens Next:</div>
+              <div>1. Our Riyadh engineering department reviews your drawings within 24 hours.</div>
+              <div>2. We verify ASTM wind load and bracket anchors for your building height.</div>
+              <div>3. A stamped commercial quotation and schedule is issued to your company.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <strong>GULF FIBER &amp; METAL CO. LTD.</strong>
+          <small style="color: var(--gold); letter-spacing: 0.15em; font-weight: 700;">NAHAS MALEE • CR VERIFIED</small>
+          <p data-en="Advanced Glass Reinforced Plastic (GRP) and architectural composite engineering headquartered on Al Farazdaq Street, Riyadh, Saudi Arabia." data-ar="هندسة وتصنيع المواد المركبة والفيبرجلاس المتقدم، المقر الرئيسي في شارع الفرزدق، الرياض، المملكة العربية السعودية.">Advanced Glass Reinforced Plastic (GRP) and architectural composite engineering headquartered on Al Farazdaq Street, Riyadh, Saudi Arabia.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-en="Products" data-ar="المنتجات">Products</h4>
+          <div class="footer-links">
+            <a href="product-detail.html?id=grp-traditional-cladding" data-en="Architectural Cladding" data-ar="التكسيات المعمارية">Architectural Cladding</a>
+            <a href="product-detail.html?id=grp-pillar-covers" data-en="Column & Pillar Covers" data-ar="أغطية الأعمدة">Column & Pillar Covers</a>
+            <a href="product-detail.html?id=grp-facade-elements" data-en="3D Mashrabiya Screens" data-ar="المشربيات والواجهات">3D Mashrabiya Screens</a>
+            <a href="product-detail.html?id=grp-sectional-water-tanks" data-en="Sectional Water Tanks" data-ar="خزانات المياه المقطعية">Sectional Water Tanks</a>
+            <a href="product-detail.html?id=grp-canopies-underpass" data-en="Underpass Wall Linings" data-ar="تكسيات الأنفاق">Underpass Wall Linings</a>
+            <a href="products.html" data-en="Full Catalog (8 Lines)" data-ar="كافة المنتجات (8 خطوط)">Full Catalog (8 Lines)</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-en="Company" data-ar="الشركة">Company</h4>
+          <div class="footer-links">
+            <a href="about.html" data-en="About Nahas Malee" data-ar="عن نحاس مالي">About Nahas Malee</a>
+            <a href="manufacturing.html" data-en="Riyadh Facility & Tooling" data-ar="مصنع الرياض والقوالب">Riyadh Facility & Tooling</a>
+            <a href="industries.html" data-en="Industry Sectors" data-ar="القطاعات المستفيدة">Industry Sectors</a>
+            <a href="projects.html" data-en="Reference Projects" data-ar="المشاريع المرجعية">Reference Projects</a>
+            <a href="quote.html" data-en="Quotation Tool" data-ar="حاسبة الأسعار">Quotation Tool</a>
+            <a href="contact.html" data-en="Contact & Location" data-ar="الموقع والاتصال">Contact & Location</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-en="Riyadh Office" data-ar="مكتب الرياض">Riyadh Office</h4>
+          <div class="footer-links" style="font-size: 12px; color: #9daaa5;">
+            <div>Al Farazdaq Street, Riyadh</div>
+            <div>Kingdom of Saudi Arabia</div>
+            <div style="margin-top: 6px;"><a href="tel:+966110000000" style="color: var(--gold);">+966 11 000 0000</a></div>
+            <div><a href="https://wa.me/966500000000" target="_blank" rel="noopener" style="color: #25D366;">WhatsApp: +966 50 000 0000</a></div>
+            <div>Sun &ndash; Thu: 8:00 AM &ndash; 5:00 PM</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <span>&copy; <span data-year></span> Gulf Fiber and Metal Company Limited. All rights reserved.</span>
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" data-en="Back to top ↑" data-ar="إلى الأعلى ↑">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Floating Quick Actions -->
+  <div class="floating" aria-label="Quick contact channels">
+    <a class="floatbtn float-top" href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" title="Back to top" aria-label="Back to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    </a>
+    <a class="floatbtn float-quote" href="quote.html" title="Request an Engineering Quotation" aria-label="Request a quote">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        <polyline points="14 2 14 8 20 8"></polyline>
+        <line x1="16" y1="13" x2="8" y2="13"></line>
+        <line x1="16" y1="17" x2="8" y2="17"></line>
+        <line x1="10" y1="9" x2="8" y2="9"></line>
+      </svg>
+    </a>
+    <a class="floatbtn float-phone" href="tel:+966110000000" title="Call Riyadh Estimating Desk" aria-label="Call office">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+    </a>
+    <a class="floatbtn float-wa" href="https://wa.me/966500000000?text=Hello%20Gulf%20Fiber%20and%20Metal%20Company.%20I%20would%20like%20to%20inquire%20about%20GRP%20products." target="_blank" rel="noopener" title="WhatsApp Riyadh Estimator" aria-label="WhatsApp">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+  </div>
+
+  <script src="assets/products-data.js"></script>
+  <script src="assets/site.js"></script>
+  <script>
+    // Quotation Engine Interactive Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const preselectProduct = urlParams.get('product');
+
+      const prodSelect = document.getElementById('quoteProduct');
+      const qtyInput = document.getElementById('quoteQuantity');
+      const resinSelect = document.getElementById('quoteResin');
+      const finishSelect = document.getElementById('quoteFinish');
+      const locSelect = document.getElementById('quoteLocation');
+
+      const sumProductTitle = document.getElementById('sumProductTitle');
+      const sumQuantity = document.getElementById('sumQuantity');
+      const sumResin = document.getElementById('sumResin');
+      const sumFinish = document.getElementById('sumFinish');
+      const sumLocation = document.getElementById('sumLocation');
+      const sumLeadTime = document.getElementById('sumLeadTime');
+      const unitLabel = document.getElementById('quoteUnitLabel');
+
+      if (preselectProduct && prodSelect) {
+        prodSelect.value = preselectProduct;
+      }
+
+      function updateSummary() {
+        const prodVal = prodSelect.value;
+        const qtyVal = parseInt(qtyInput.value, 10) || 100;
+        const resinVal = resinSelect.value;
+        const finishVal = finishSelect.value;
+        const locVal = locSelect.value;
+
+        let selectedProduct = null;
+        const data = (typeof PRODUCTS_DATA !== 'undefined' ? PRODUCTS_DATA : (window.PRODUCTS_DATA || []));
+        if (data && data.length) {
+          selectedProduct = data.find(p => p.id === prodVal);
+        }
+
+        const isAr = document.documentElement.lang === 'ar';
+        const pName = selectedProduct ? (isAr ? (selectedProduct.nameAr || selectedProduct.name) : selectedProduct.name) : prodSelect.options[prodSelect.selectedIndex].text;
+
+        sumProductTitle.textContent = pName;
+
+        let unit = 'm²';
+        if (prodVal === 'grp-pillar-covers') unit = 'Linear Meters (m)';
+        else if (prodVal === 'grp-sectional-water-tanks') unit = 'Liters (L)';
+        else if (prodVal === 'grp-domes-cornices') unit = 'Modules / Meters';
+
+        unitLabel.textContent = unit;
+        sumQuantity.textContent = `${qtyVal.toLocaleString()} ${unit}`;
+        sumResin.textContent = resinVal;
+        sumFinish.textContent = finishVal;
+        sumLocation.textContent = locVal;
+
+        // Dynamic lead time estimation
+        if (qtyVal > 3000) {
+          sumLeadTime.textContent = '20 - 30 Business Days';
+        } else if (qtyVal > 1000) {
+          sumLeadTime.textContent = '14 - 20 Business Days';
+        } else {
+          sumLeadTime.textContent = '10 - 16 Business Days';
+        }
+      }
+
+      [prodSelect, qtyInput, resinSelect, finishSelect, locSelect].forEach(el => {
+        el.addEventListener('input', updateSummary);
+        el.addEventListener('change', updateSummary);
+      });
+
+      updateSummary();
+
+      // Send to WhatsApp
+      document.getElementById('btnSendWhatsApp').addEventListener('click', () => {
+        const prodName = prodSelect.options[prodSelect.selectedIndex].text;
+        const qty = qtyInput.value;
+        const unit = unitLabel.textContent;
+        const resin = resinSelect.value;
+        const finish = finishSelect.value;
+        const loc = locSelect.value;
+        const name = document.getElementById('clientName').value || 'Prospective Client';
+        const company = document.getElementById('clientCompany').value || 'Unspecified';
+        const phone = document.getElementById('clientPhone').value || 'N/A';
+        const notes = document.getElementById('projectNotes').value || 'None';
+
+        const msg = `*RFQ - Gulf Fiber & Metal Company Limited*\n` +
+          `-------------------------------\n` +
+          `*Client:* ${name} (${company})\n` +
+          `*Phone:* ${phone}\n` +
+          `*Product System:* ${prodName}\n` +
+          `*Estimated Scope:* ${qty} ${unit}\n` +
+          `*Resin Matrix:* ${resin}\n` +
+          `*Surface Finish:* ${finish}\n` +
+          `*Project Region:* ${loc}\n` +
+          `*Notes:* ${notes}\n` +
+          `-------------------------------\n` +
+          `Submitted via Website Quotation Generator.`;
+
+        const waUrl = `https://wa.me/966500000000?text=${encodeURIComponent(msg)}`;
+        window.open(waUrl, '_blank');
+      });
+
+      // Submit Email RFQ
+      document.getElementById('quoteCalculatorForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const prodName = prodSelect.options[prodSelect.selectedIndex].text;
+        const qty = qtyInput.value;
+        const unit = unitLabel.textContent;
+        const resin = resinSelect.value;
+        const finish = finishSelect.value;
+        const loc = locSelect.value;
+        const name = document.getElementById('clientName').value;
+        const company = document.getElementById('clientCompany').value;
+        const email = document.getElementById('clientEmail').value;
+        const phone = document.getElementById('clientPhone').value;
+        const notes = document.getElementById('projectNotes').value;
+
+        const emailBody = `OFFICIAL REQUEST FOR QUOTATION (RFQ)\n` +
+          `Gulf Fiber & Metal Company Limited - Estimating Division\n\n` +
+          `PROJECT & MATERIAL SPECIFICATIONS:\n` +
+          `- System: ${prodName}\n` +
+          `- Scope / Quantity: ${qty} ${unit}\n` +
+          `- Resin Matrix: ${resin}\n` +
+          `- Surface Finish: ${finish}\n` +
+          `- Destination: ${loc}\n\n` +
+          `CLIENT CONTACT DETAILS:\n` +
+          `- Name: ${name}\n` +
+          `- Company: ${company}\n` +
+          `- Email: ${email}\n` +
+          `- Mobile/WhatsApp: ${phone}\n\n` +
+          `SCOPE NOTES & SPECIAL REQUIREMENTS:\n${notes}\n\n` +
+          `Generated via GFM Quotation Engine.`;
+
+        const mailtoUrl = `mailto:info@gulffibermetal.com?subject=${encodeURIComponent('RFQ: ' + prodName + ' - ' + company)}&body=${encodeURIComponent(emailBody)}`;
+        window.location.href = mailtoUrl;
+      });
+
+      window.addEventListener('languageChanged', updateSummary);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3D" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1E2E"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="facetHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="380" fill="url(#bgGrad3D)"/>
+
+  <!-- 3D Geometric Facade Modules & Mashrabiya Geometry -->
+  <g transform="translate(60, 40)">
+    <!-- 3D Diamond / Origami Faceted Panel Array -->
+    <!-- Module 1 -->
+    <g transform="translate(40, 20)">
+      <polygon points="90,10 170,70 90,130 10,70" fill="#334155" stroke="#0D9488" stroke-width="1.5"/>
+      <polygon points="90,10 170,70 90,70" fill="#E2E8F0"/>
+      <polygon points="170,70 90,130 90,70" fill="#94A3B8"/>
+      <polygon points="90,130 10,70 90,70" fill="#64748B"/>
+      <polygon points="10,70 90,10 90,70" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Module 2 -->
+    <g transform="translate(210, 20)">
+      <polygon points="90,10 170,70 90,130 10,70" fill="#334155" stroke="#0D9488" stroke-width="1.5"/>
+      <polygon points="90,10 170,70 90,70" fill="#E2E8F0"/>
+      <polygon points="170,70 90,130 90,70" fill="#94A3B8"/>
+      <polygon points="90,130 10,70 90,70" fill="#64748B"/>
+      <polygon points="10,70 90,10 90,70" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Mashrabiya Perforated Solar Shading Module Below -->
+    <g transform="translate(40, 160)">
+      <rect x="0" y="0" width="400" height="100" fill="#16283D" stroke="#0D9488" stroke-width="1.5" rx="3"/>
+      <!-- Perforation array (Geometric Octagons & Stars) -->
+      <g fill="#0F1E2E" stroke="#14B8A6" stroke-width="1">
+        <polygon points="50,25 65,35 65,55 50,65 35,55 35,35"/>
+        <polygon points="110,25 125,35 125,55 110,65 95,55 95,35"/>
+        <polygon points="170,25 185,35 185,55 170,65 155,55 155,35"/>
+        <polygon points="230,25 245,35 245,55 230,65 215,55 215,35"/>
+        <polygon points="290,25 305,35 305,55 290,65 275,55 275,35"/>
+        <polygon points="350,25 365,35 365,55 350,65 335,55 335,35"/>
+      </g>
+      <text x="200" y="85" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="10" font-weight="600" text-anchor="middle">SOLAR RADIATION CUTOFF: 65% • WIND PRESSURE: 3.5 kPa</text>
+    </g>
+  </g>
+
+  <!-- Technical Spec Bar -->
+  <rect x="20" y="325" width="560" height="38" fill="#0C1929" rx="4"/>
+  <text x="35" y="348" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="12" font-weight="700">3D FACADES &amp; MASHRABIYA SCREENS</text>
+  <text x="545" y="348" fill="#14B8A6" font-family="monospace" font-size="11" font-weight="600" text-anchor="end">PARAMETRIC ARCHITECTURAL GRP</text>
+</svg>

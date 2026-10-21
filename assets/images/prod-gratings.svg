@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGratings" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <pattern id="grateMesh" width="24" height="24" patternUnits="userSpaceOnUse">
+      <rect width="24" height="24" fill="#EAB308"/>
+      <rect x="3" y="3" width="18" height="18" fill="#0F172A"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="380" fill="url(#bgGratings)"/>
+
+  <!-- Molded Fiberglass Industrial Grating Panel Isometric -->
+  <g transform="translate(100, 40)">
+    <!-- Main Grating Slab -->
+    <polygon points="60,60 340,30 380,180 100,210" fill="url(#grateMesh)" stroke="#CA8A04" stroke-width="2"/>
+    <polygon points="100,210 380,180 380,215 100,245" fill="#A16207" stroke="#713F12" stroke-width="1.5"/>
+    <polygon points="60,60 100,210 100,245 60,95" fill="#854D0E" stroke="#713F12" stroke-width="1.5"/>
+
+    <!-- Concrete Trench Ledge Support -->
+    <path d="M 40 230 L 100 245 L 380 215 L 420 200" fill="none" stroke="#64748B" stroke-width="6"/>
+    
+    <!-- SS316 M-Clip Hold-Down Fastener Detail -->
+    <g transform="translate(240, 105)">
+      <circle cx="15" cy="15" r="12" fill="#E2E8F0" stroke="#0D9488" stroke-width="2"/>
+      <circle cx="15" cy="15" r="5" fill="#334155"/>
+      <line x1="15" y1="27" x2="15" y2="55" stroke="#0D9488" stroke-width="1.5" stroke-dasharray="2,2"/>
+      <text x="35" y="20" fill="#F8FAFC" font-family="'Inter', sans-serif" font-size="11" font-weight="700">SS316 M-CLIP</text>
+    </g>
+  </g>
+
+  <!-- Technical Spec Bar -->
+  <rect x="20" y="325" width="560" height="38" fill="#0C1929" rx="4"/>
+  <text x="35" y="348" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="12" font-weight="700">MOLDED &amp; PULTRUDED GRP GRATINGS</text>
+  <text x="545" y="348" fill="#EAB308" font-family="monospace" font-size="11" font-weight="600" text-anchor="end">NON-SPARKING • CHEMICAL RESISTANT</text>
+</svg>

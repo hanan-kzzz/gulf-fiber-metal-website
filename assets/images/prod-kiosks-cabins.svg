@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgKiosk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="glassTint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="380" fill="url(#bgKiosk)"/>
+
+  <!-- GRP Security Cabin Isometric -->
+  <g transform="translate(130, 25)">
+    <!-- Cabin Roof Projection (Overhang) -->
+    <polygon points="170,30 20,70 190,110 340,70" fill="#0C1929" stroke="#0D9488" stroke-width="2"/>
+    <polygon points="20,70 190,110 190,125 20,85" fill="#1E293B"/>
+    <polygon points="190,110 340,70 340,85 190,125" fill="#334155"/>
+
+    <!-- Left Cabin Wall -->
+    <polygon points="40,80 180,118 180,265 40,227" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+    
+    <!-- Left Wall Glazing / Sliding Window -->
+    <polygon points="60,110 160,138 160,195 60,167" fill="url(#glassTint)" stroke="#0284C7" stroke-width="1.5"/>
+    <!-- Glazing Reflection line -->
+    <line x1="80" y1="115" x2="140" y2="190" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.6"/>
+
+    <!-- Right Cabin Wall with Entry Door -->
+    <polygon points="180,118 320,80 320,227 180,265" fill="#E2E8F0" stroke="#64748B" stroke-width="1.5"/>
+    <!-- Door Outline -->
+    <polygon points="200,122 270,103 270,240 200,260" fill="#FFFFFF" stroke="#475569" stroke-width="1.5"/>
+    <!-- Door Window -->
+    <polygon points="215,130 255,119 255,170 215,181" fill="url(#glassTint)"/>
+    <circle cx="210" cy="195" r="3" fill="#0D9488"/>
+
+    <!-- Lifting Lugs for Crane Transport -->
+    <rect x="70" y="45" width="8" height="12" fill="#0D9488" rx="2"/>
+    <rect x="290" y="45" width="8" height="12" fill="#0D9488" rx="2"/>
+
+    <!-- Structural Base Frame with Forklift Pockets -->
+    <polygon points="35,230 180,268 325,230 180,192" fill="none"/>
+    <polygon points="35,230 180,268 180,280 35,242" fill="#334155"/>
+    <polygon points="180,268 325,230 325,242 180,280" fill="#1E293B"/>
+
+    <!-- Forklift Pockets -->
+    <rect x="75" y="247" width="25" height="12" fill="#0C1929"/>
+    <rect x="125" y="260" width="25" height="12" fill="#0C1929"/>
+  </g>
+
+  <!-- Technical Spec Bar -->
+  <rect x="20" y="325" width="560" height="38" fill="#0C1929" rx="4"/>
+  <text x="35" y="348" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="12" font-weight="700">PREFABRICATED GRP SECURITY CABINS</text>
+  <text x="545" y="348" fill="#14B8A6" font-family="monospace" font-size="11" font-weight="600" text-anchor="end">DOUBLE-SKIN PU INSULATED • PORTABLE</text>
+</svg>
