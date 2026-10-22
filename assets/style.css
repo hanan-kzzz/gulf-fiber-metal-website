@@ -587,17 +587,20 @@ h1 em {
 }
 
 .product {
-  background: var(--paper-card);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
   position: relative;
   overflow: hidden;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s, border-color 0.35s;
   display: flex;
   flex-direction: column;
 }
 
 .product:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 16px 36px rgba(26, 33, 32, 0.08);
+  border-color: var(--orange);
 }
 
 .product-img {
@@ -888,6 +891,14 @@ h1 em {
   min-height: 380px;
   overflow: hidden;
   background: #d7d9d1;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s;
+}
+
+.project-img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(26, 33, 32, 0.12);
 }
 
 .project-img img {
@@ -1267,22 +1278,24 @@ h1 em {
 }
 
 .step-card {
-  background: var(--paper-card);
-  padding: 28px 24px;
+  background: #ffffff;
+  padding: 32px 26px;
   position: relative;
-  border-top: 3px solid var(--orange);
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s, border-color 0.35s;
 }
 
 .step-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-sm);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(26, 33, 32, 0.08);
+  border-color: var(--orange);
 }
 
 .step-num {
-  font: 800 28px 'Manrope', sans-serif;
-  color: var(--mist);
-  margin-bottom: 12px;
+  font: 800 32px 'Manrope', sans-serif;
+  color: var(--orange);
+  margin-bottom: 14px;
   line-height: 1;
 }
 
@@ -1306,21 +1319,19 @@ h1 em {
 }
 
 .industry-card {
-  background: #e8e8e1;
+  background: #ffffff;
   padding: 34px;
   display: flex;
   flex-direction: column;
-  border-left: 4px solid var(--teal);
-  transition: transform 0.3s;
-}
-
-[dir="rtl"] .industry-card {
-  border-left: none;
-  border-right: 4px solid var(--teal);
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s, border-color 0.35s;
 }
 
 .industry-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(26, 33, 32, 0.08);
+  border-color: var(--orange);
 }
 
 .industry-card h3 {
@@ -1598,13 +1609,443 @@ h1 em {
 /* Animation Utilities */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s, transform 0.8s;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ========================================================
+   LA BOÎTE À SLIDES INSIPIRED UI/UX & MOTION DESIGN SYSTEM
+   ======================================================== */
+
+/* Rotating Circular Agency Badge */
+.agency-badge-wrap {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agency-badge-rotate {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: spinSlow 18s linear infinite;
+  transform-origin: center center;
+}
+
+.agency-badge-rotate text {
+  font-family: 'Manrope', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  fill: var(--mist);
+  text-transform: uppercase;
+}
+
+.agency-badge-center {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(198, 96, 19, 0.4);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.agency-badge-wrap:hover .agency-badge-center {
+  transform: scale(1.12) rotate(45deg);
+}
+
+/* Gradient & Editorial Typography */
+.agency-gradient-text {
+  background: linear-gradient(135deg, #ffffff 30%, #e2b46b 70%, #c66013 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.agency-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mist);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.agency-pill-badge:hover {
+  background: rgba(198, 96, 19, 0.18);
+  border-color: var(--orange);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.agency-pill-badge.active {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+}
+
+/* Interactive Presentation Deck (La Boîte à Slides Slide Showcase) */
+.slide-deck {
+  background: #19201f;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  position: relative;
+  margin: 40px 0 20px;
+}
+
+.slide-deck-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.slide-deck-counter {
+  font: 700 13px 'Manrope', sans-serif;
+  letter-spacing: 0.12em;
+  color: var(--mist);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slide-deck-counter strong {
+  color: var(--gold);
+  font-size: 16px;
+}
+
+.slide-deck-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slide-ctrl-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-ctrl-btn:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  transform: scale(1.08);
+}
+
+/* Slide Deck Progress Bar */
+.slide-progress-track {
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-progress-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--orange));
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[dir="rtl"] .slide-progress-fill {
+  left: auto;
+  right: 0;
+}
+
+/* Slide Deck Content Area */
+.slide-stage {
+  position: relative;
+  min-height: 440px;
+}
+
+.slide-panel {
+  display: none;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 36px;
+  padding: 36px 36px 42px;
+  align-items: center;
+}
+
+.slide-panel.active {
+  display: grid;
+  animation: slideFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.slide-info-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.slide-info h3 {
+  font: 700 clamp(24px, 3vw, 36px) 'Manrope', sans-serif;
+  color: #ffffff;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.slide-info p {
+  color: #c1ccc7;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 520px;
+}
+
+.slide-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.slide-spec-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.slide-spec-box small {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mist);
+  margin-bottom: 4px;
+}
+
+.slide-spec-box strong {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+}
+
+.slide-visual-box {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  height: 360px;
+  background: #111;
+}
+
+.slide-visual-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-panel:hover .slide-visual-box img {
+  transform: scale(1.05);
+}
+
+.slide-visual-tag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(26, 33, 32, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font: 700 11px 'Manrope', sans-serif;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+}
+
+[dir="rtl"] .slide-visual-tag {
+  right: auto;
+  left: 16px;
+}
+
+/* Slide Deck Interactive Navigation Pills Bar */
+.slide-tabs-bar {
+  display: flex;
+  gap: 8px;
+  padding: 16px 28px;
+  background: rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.slide-tabs-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.slide-tab-btn {
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #b5c2be;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.slide-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.slide-tab-btn.active {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(198, 96, 19, 0.35);
+}
+
+/* Methodology / Process Step Cards (La Boîte à Slides 4-step architecture) */
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 36px;
+}
+
+.method-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 32px 26px;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.method-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(26, 33, 32, 0.08);
+  border-color: var(--orange);
+}
+
+.method-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.method-num {
+  font: 800 32px 'Manrope', sans-serif;
+  color: var(--orange);
+  line-height: 1;
+}
+
+.method-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(26, 33, 32, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  transition: background 0.3s, color 0.3s;
+}
+
+.method-card:hover .method-icon-circle {
+  background: var(--orange);
+  color: #fff;
+}
+
+.method-card h3 {
+  font: 700 18px 'Manrope', sans-serif;
+  color: var(--ink);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.method-card p {
+  color: #62706c;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Keyframe Animations */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(198, 96, 19, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(198, 96, 19, 0);
+  }
 }
 
 @keyframes marquee {
@@ -1792,6 +2233,33 @@ h1 em {
     flex-direction: column;
     align-items: flex-start;
   }
+  .slide-deck {
+    border-radius: 20px;
+    margin: 28px 0 10px;
+  }
+  .slide-deck-header {
+    padding: 14px 18px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .slide-panel {
+    grid-template-columns: 1fr;
+    padding: 24px 18px 28px;
+    gap: 24px;
+  }
+  .slide-visual-box {
+    height: 240px;
+    order: -1;
+  }
+  .slide-specs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .slide-tabs-bar {
+    padding: 12px 16px;
+  }
+  .method-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .floating {
     right: 14px;
     bottom: 18px;
@@ -1800,5 +2268,14 @@ h1 em {
   .floatbtn {
     width: 44px;
     height: 44px;
+  }
+}
+
+@media (max-width: 580px) {
+  .method-grid {
+    grid-template-columns: 1fr;
+  }
+  .slide-specs-grid {
+    grid-template-columns: 1fr;
   }
 }

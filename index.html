@@ -62,23 +62,55 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="wrap hero-grid">
+    <!-- Hero Section (La Boîte à Slides Editorial Motion Style) -->
+    <section class="hero" style="padding-bottom: 20px;">
+      <div class="wrap hero-grid" style="align-items: center;">
         <div class="reveal">
-          <div class="eyebrow" data-en="Engineered Architectural Composites" data-ar="مركبات هندسية معمارية متقدمة">Engineered Architectural Composites</div>
-          <h1 data-en="Built to perform.<br><em>Designed to inspire.</em>" data-ar="صُممت لتدوم.<br><em>وهُندست لتُلهم.</em>">Built to perform.<br><em>Designed to inspire.</em></h1>
-          <p class="hero-copy" data-en="Advanced Glass Reinforced Plastic (GRP) and architectural composite solutions engineered in Riyadh. Delivering supreme durability, dead-load reduction up to 75%, and refined aesthetic freedom for Saudi Arabia's landmark infrastructure and giga-projects." data-ar="حلول متقدمة من البلاستيك المقوى بالألياف الزجاجية (GRP) مصنعة هندسيًا في الرياض. نضمن أعلى درجات المتانة، مع تخفيض الأحمال الإنشائية بنسبة تصل إلى 75% وحرية تشكيل استثنائية لمشاريع المملكة الكبرى.">Advanced Glass Reinforced Plastic (GRP) and architectural composite solutions engineered in Riyadh. Delivering supreme durability, dead-load reduction up to 75%, and refined aesthetic freedom for Saudi Arabia's landmark infrastructure and giga-projects.</p>
-          <div class="hero-actions">
-            <a class="btn" href="products.html" data-en="Explore Products ↗" data-ar="استعراض المنتجات ↗">Explore Products ↗</a>
-            <a class="btn outline" href="quote.html" data-en="Calculate Quotation" data-ar="حساب تسعيرة المشروع">Calculate Quotation</a>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;">
+            <span class="agency-pill-badge active" data-en="ISO 9001:2015 Certified" data-ar="شهادة آيزو 9001:2015">ISO 9001:2015 Certified</span>
+            <span class="agency-pill-badge" data-en="ASTM E84 Class A" data-ar="مقاومة حريق ASTM E84 فئة A">ASTM E84 Class A</span>
+            <span class="agency-pill-badge" data-en="Riyadh Factory HQ" data-ar="المصنع الرئيسي بالرياض">Riyadh Factory HQ</span>
           </div>
-          <div class="hero-note">
+
+          <h1 style="line-height: 1.05; letter-spacing: -0.04em; margin-bottom: 22px;">
+            <span data-en="Shaping Landmark Visions" data-ar="صياغة الرؤى المعمارية الكبرى">Shaping Landmark Visions</span><br>
+            <span class="agency-gradient-text" data-en="Into Precision Composites." data-ar="إلى مركبات هندسية فائقة الدقة.">Into Precision Composites.</span>
+          </h1>
+
+          <p class="hero-copy" data-en="Premier manufacturer of high-integrity Glass Reinforced Plastic (GRP) cladding, column systems, 3D parametric facades, and water storage solutions engineered on Al Farazdaq Street, Riyadh. Achieving up to 75% dead-load reduction and limitless sculptural freedom for Saudi Arabia's giga-projects." data-ar="الشركة الرائدة في تصنيع تكسيات الفيبرجلاس (GRP) وأنظمة الأعمدة والواجهات ثلاثية الأبعاد وخزانات المياه في الرياض، شارع الفرزدق. نضمن تخفيض 75% من أحمال المباني وحرية تشكيل استثنائية لمشاريع المملكة الكبرى.">Premier manufacturer of high-integrity Glass Reinforced Plastic (GRP) cladding, column systems, 3D parametric facades, and water storage solutions engineered on Al Farazdaq Street, Riyadh. Achieving up to 75% dead-load reduction and limitless sculptural freedom for Saudi Arabia's giga-projects.</p>
+
+          <div class="hero-actions" style="margin-top: 32px;">
+            <a class="btn" href="products.html" data-en="Explore Product Systems ↗" data-ar="استعراض أنظمة المنتجات ↗">Explore Product Systems ↗</a>
+            <a class="btn outline" href="quote.html" data-en="Instant Technical Quotation" data-ar="حساب تسعيرة فورية">Instant Technical Quotation</a>
+          </div>
+
+          <div class="hero-note" style="margin-top: 38px;">
             <span class="pulse"></span> 
-            <span data-en="Verified Riyadh Manufacturer • ASTM & SASO Compliant" data-ar="مصنع معتمد في الرياض • مطابقة لمعايير ASTM و SASO">Verified Riyadh Manufacturer • ASTM & SASO Compliant</span>
+            <span data-en="Verified Riyadh Manufacturer • SASO, WRAS & ASTM Tested" data-ar="مصنع معتمد في الرياض • مطابقة لمعايير SASO و WRAS و ASTM">Verified Riyadh Manufacturer • SASO, WRAS & ASTM Tested</span>
           </div>
         </div>
-        <div class="hero-visual reveal">
+
+        <div class="hero-visual reveal" style="display: flex; flex-direction: column; align-items: flex-end; justify-content: center; position: relative;">
+          <!-- Rotating Agency Emblem / Seal (La Boîte à Slides signature badge) -->
+          <div class="agency-badge-wrap" style="position: absolute; top: -30px; right: 0; z-index: 10;">
+            <svg class="agency-badge-rotate" viewBox="0 0 120 120">
+              <defs>
+                <path id="circlePath" d="M 60, 60 m -44, 0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0"></path>
+              </defs>
+              <text>
+                <textPath xlink:href="#circlePath" href="#circlePath">
+                  • GULF FIBER &amp; METAL • RIYADH COMPOSITES •
+                </textPath>
+              </text>
+            </svg>
+            <div class="agency-badge-center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </div>
+
           <img class="hero-image" src="assets/images/hero-factory.jpg" alt="Gulf Fiber & Metal Composite Engineering Facility in Riyadh">
           <div class="visual-frame"></div>
           <div class="visual-label">
@@ -87,33 +119,262 @@
           </div>
         </div>
       </div>
+
+      <!-- Interactive Presentation Slide Deck (La Boîte à Slides Feature) -->
+      <div class="wrap reveal">
+        <div class="slide-deck" data-slide-deck>
+          <div class="slide-deck-header">
+            <div class="slide-deck-counter">
+              <span data-en="PRESENTATION SHOWCASE" data-ar="عرض الأنظمة التفاعلي">PRESENTATION SHOWCASE</span>
+              <span>/</span>
+              <strong data-slide-current>01</strong>
+              <span>of 06</span>
+            </div>
+
+            <div class="slide-deck-controls">
+              <button class="slide-ctrl-btn" data-slide-prev aria-label="Previous Slide">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button class="slide-ctrl-btn" data-slide-next aria-label="Next Slide">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="slide-progress-track">
+            <div class="slide-progress-fill" style="width: 16.66%;"></div>
+          </div>
+
+          <div class="slide-stage">
+            <!-- Slide 01 -->
+            <div class="slide-panel active">
+              <div class="slide-info">
+                <div class="slide-info-meta">
+                  <span class="agency-pill-badge active" data-en="System 01" data-ar="النظام 01">System 01</span>
+                  <span class="agency-pill-badge" data-en="Exterior Cladding" data-ar="تكسيات خارجية">Exterior Cladding</span>
+                </div>
+                <h3 data-en="GRP Traditional &amp; Heritage Cladding" data-ar="ألواح التكسية التراثية والمعمارية">GRP Traditional &amp; Heritage Cladding</h3>
+                <p data-en="Ultra-lightweight architectural panels replicating natural limestone, sandstone, and regional heritage textures. Engineered with concealed aluminum subframes for 75% dead-load reduction over precast concrete." data-ar="ألواح معمارية خفيفة الوزن تعيد محاكاة تفاصيل الحجر الجيري والرملي والنقوش التراثية، مع مرابط تثبيت ألومنيوم مخفية لتخفيض 75% من الأحمال الهيكلية.">Ultra-lightweight architectural panels replicating natural limestone, sandstone, and regional heritage textures. Engineered with concealed aluminum subframes for 75% dead-load reduction over precast concrete.</p>
+                <div class="slide-specs-grid">
+                  <div class="slide-spec-box">
+                    <small data-en="Tensile Strength" data-ar="قوة الشد">Tensile Strength</small>
+                    <strong>70–110 MPa</strong>
+                  </div>
+                  <div class="slide-spec-box">
+                    <small data-en="Fire Rating" data-ar="مقاومة الحريق">Fire Rating</small>
+                    <strong>ASTM E84 Class 1</strong>
+                  </div>
+                  <div class="slide-spec-box">
+                    <small data-en="Weight Reduction" data-ar="تخفيض الوزن">Weight Reduction</small>
+                    <strong>-75% vs Stone</strong>
+                  </div>
+                </div>
+                <a class="btn" href="product-detail.html?id=grp-traditional-cladding" data-en="Inspect Cladding Datasheet ↗" data-ar="تفاصيل المواصفات الفنية ↗">Inspect Cladding Datasheet ↗</a>
+              </div>
+              <div class="slide-visual-box">
+                <span class="slide-visual-tag">SLIDE 01 / CLADDING</span>
+                <img src="assets/images/prod-cladding.jpg" alt="GRP Traditional & Heritage Cladding">
+              </div>
+            </div>
+
+            <!-- Slide 02 -->
+            <div class="slide-panel">
+              <div class="slide-info">
+                <div class="slide-info-meta">
+                  <span class="agency-pill-badge active" data-en="System 02" data-ar="النظام 02">System 02</span>
+                  <span class="agency-pill-badge" data-en="Column Systems" data-ar="أنظمة الأعمدة">Column Systems</span>
+                </div>
+                <h3 data-en="Interlocking Pillar &amp; Column Covers" data-ar="أغطية وتكسيات الأعمدة المعمارية">Interlocking Pillar &amp; Column Covers</h3>
+                <p data-en="Precision-moulded cylindrical, square, and fluted column enclosures with interlocking vertical joints and zero exposed hardware. High impact resistance rated Barcol 45-50 for high-footfall commercial concourses." data-ar="تغليف هندسي متقن للأعمدة الأسطوانية والمربعة بفواصل تعشيق طولية مخفية خالية من البراغي الظاهرة، مع صلادة باركول 45-50 لتحمل الصدمات في المجمعات.">Precision-moulded cylindrical, square, and fluted column enclosures with interlocking vertical joints and zero exposed hardware. High impact resistance rated Barcol 45-50 for high-footfall commercial concourses.</p>
+                <div class="slide-specs-grid">
+                  <div class="slide-spec-box">
+                    <small data-en="Weight Density" data-ar="الوزن المتري">Weight Density</small>
+                    <strong>8–12 kg/m</strong>
+                  </div>
+                  <div class="slide-spec-box">
+                    <small data-en="Hardness" data-ar="الصلادة">Hardness</small>
+                    <strong>Barcol 45–50</strong>
+                  </div>
+                  <div class="slide-spec-box">
+                    <small data-en="Joint Detail" data-ar="تفصيل الفواصل">Joint Detail</small>
+                    <strong>Interlocking Hairline</strong>
+                  </div>
+                </div>
+                <a class="btn" href="product-detail.html?id=grp-pillar-covers" data-en="Inspect Column Datasheet ↗" data-ar="تفاصيل مواصفات الأعمدة ↗">Inspect Column Datasheet ↗</a>
+              </div>
+              <div class="slide-visual-box">
+                <span class="slide-visual-tag">SLIDE 02 / COLUMNS</span>
+                <img src="assets/images/prod-pillar.jpg" alt="GRP Pillar and Column Covers">
+              </div>
+            </div>
+
+            <!-- Slide 03 -->
+            <div class="slide-panel">
+              <div class="slide-info">
+                <div class="slide-info-meta">
+                  <span class="agency-pill-badge active" data-en="System 03" data-ar="النظام 03">System 03</span>
+                  <span class="agency-pill-badge" data-en="Solar Screens" data-ar="شاشات شمسية">Solar Screens</span>
+                </div>
+                <h3 data-en="3D Facades &amp; Mashrabiya Screens" data-ar="الواجهات ثلاثية الأبعاد والمشربيات">3D Facades &amp; Mashrabiya Screens</h3>
+                <p data-en="Sculptural parametric panels engineered for passive solar heat gain mitigation and striking geometric depth. Certified for 3.5 kPa wind load resistance with high Solar Reflectance Index (SRI) gelcoats." data-ar="واجهات بارامترية هندسية تعمل كشاشات تظليل شمسية ذكية تعكس الحرارة وتوفر عمقًا بصريًا مذهلاً مع مقاومة رياح حتى 3.5 كيلو باسكال.">Sculptural parametric panels engineered for passive solar heat gain mitigation and striking geometric depth. Certified for 3.5 kPa wind load resistance with high Solar Reflectance Index (SRI) gelcoats.</p>
+                <div class="slide-specs-grid">
+                  <div class="slide-spec-box">
+                    <small data-en="Wind Rating" data-ar="مقاومة الرياح">Wind Rating</small>
+                    <strong>3.5 kPa Tested</strong>
+                  </div>
+                  <div class="slide-spec-box">
+                    <small data-en="Solar Mitigation" data-ar="العزل الحراري">Solar Mitigation</small>
+                    <strong>High SRI Rating</strong>
+                  </div>
+                  <div class="slide-spec-box">
+                    <small data-en="Geometry" data-ar="الهندسة">Geometry</small>
+                    <strong>Parametric 3D</strong>
+                  </div>
+                </div>
+                <a class="btn" href="product-detail.html?id=grp-facade-elements" data-en="Inspect Facade Datasheet ↗" data-ar="تفاصيل مواصفات الواجهات ↗">Inspect Facade Datasheet ↗</a>
+              </div>
+              <div class="slide-visual-box">
+                <span class="slide-visual-tag">SLIDE 03 / 3D FACADES</span>
+                <img src="assets/images/prod-facade.jpg" alt="GRP 3D Facade & Mashrabiya Screens">
+              </div>
+            </div>
+
+            <!-- Slide 04 -->
+            <div class="slide-panel">
+              <div class="slide-info">
+                <div class="slide-info-meta">
+                  <span class="agency-pill-badge active" data-en="System 04" data-ar="النظام 04">System 04</span>
+                  <span class="agency-pill-badge" data-en="Transit &amp; Tunnels" data-ar="الأنفاق والمواصلات">Transit &amp; Tunnels</span>
+                </div>
+                <h3 data-en="Underpass &amp; Tunnel Wall Linings" data-ar="تكسيات جدران الأنفاق والمظلات">Underpass &amp; Tunnel Wall Linings</h3>
+                <p data-en="Continuous tunnel and underpass wall lining systems formulated with acoustic core damping and anti-graffiti fluoropolymer gelcoat. Resists vehicle combustion fumes, chemical pressure washing, and structural vibrations." data-ar="أنظمة تكسية متواصلة لجدران الأنفاق المرورية بقلب عازل للصوت وجل كوت مقاوم للكتابة وعوادم السيارات والغسيل عالي الضغط.">Continuous tunnel and underpass wall lining systems formulated with acoustic core damping and anti-graffiti fluoropolymer gelcoat. Resists vehicle combustion fumes, chemical pressure washing, and structural vibrations.</p>
+                <div class="slide-specs-grid">
+                  <div class="slide-spec-box">
+                    <small data-en="Surface Finish" data-ar="تشطيب السطح">Surface Finish</small>
+                    <strong>Anti-Graffiti Coat</strong>
+                  </div>
+                  <div class="slide-spec-box">
+                    <small data-en="Fixing Hardware" data-ar="قطع التثبيت">Fixing Hardware</small>
+                    <strong>Marine SS316</strong>
+                  </div>
+                  <div class="slide-spec-box">
+                    <small data-en="Acoustics" data-ar="العزل الصوتي">Acoustics</small>
+                    <strong>NRC 0.65+ Core</strong>
+                  </div>
+                </div>
+                <a class="btn" href="product-detail.html?id=grp-canopies-underpass" data-en="Inspect Underpass Datasheet ↗" data-ar="تفاصيل تكسيات الأنفاق ↗">Inspect Underpass Datasheet ↗</a>
+              </div>
+              <div class="slide-visual-box">
+                <span class="slide-visual-tag">SLIDE 04 / UNDERPASS</span>
+                <img src="assets/images/prod-canopy.jpg" alt="Underpass Linings and Architectural Canopies">
+              </div>
+            </div>
+
+            <!-- Slide 05 -->
+            <div class="slide-panel">
+              <div class="slide-info">
+                <div class="slide-info-meta">
+                  <span class="agency-pill-badge active" data-en="System 05" data-ar="النظام 05">System 05</span>
+                  <span class="agency-pill-badge" data-en="Liquid Storage" data-ar="تخزين السوائل">Liquid Storage</span>
+                </div>
+                <h3 data-en="Sectional Panel Water Storage Tanks" data-ar="خزانات المياه المقطعية من الفيبرجلاس">Sectional Panel Water Storage Tanks</h3>
+                <p data-en="Heavy-duty hot-pressed SMC composite panel tanks certified to WRAS and SASO drinking water standards. Scalable from 1,000L to over 5,000,000L with zero bacterial growth and high-density thermal PU insulation." data-ar="خزانات مقطعية مكبوسة على الساخن SMC معتمدة لمياه الشرب ومكافحة الحريق بسعات من 1,000 إلى 5,000,000+ لتر دون أي نمو بكتيري.">Heavy-duty hot-pressed SMC composite panel tanks certified to WRAS and SASO drinking water standards. Scalable from 1,000L to over 5,000,000L with zero bacterial growth and high-density thermal PU insulation.</p>
+                <div class="slide-specs-grid">
+                  <div class="slide-spec-box">
+                    <small data-en="Certifications" data-ar="الشهادات">Certifications</small>
+                    <strong>WRAS &amp; SASO</strong>
+                  </div>
+                  <div class="slide-spec-box">
+                    <small data-en="Capacity Range" data-ar="سعة الخزان">Capacity Range</small>
+                    <strong>1kL – 5,000kL+</strong>
+                  </div>
+                  <div class="slide-spec-box">
+                    <small data-en="Thermal Insulation" data-ar="العزل الحراري">Thermal Insulation</small>
+                    <strong>50mm Polyurethane</strong>
+                  </div>
+                </div>
+                <a class="btn" href="product-detail.html?id=grp-sectional-water-tanks" data-en="Inspect Tank Datasheet ↗" data-ar="تفاصيل مواصفات الخزانات ↗">Inspect Tank Datasheet ↗</a>
+              </div>
+              <div class="slide-visual-box">
+                <span class="slide-visual-tag">SLIDE 05 / TANKS</span>
+                <img src="assets/images/prod-tank.jpg" alt="Sectional GRP Water Storage Tanks">
+              </div>
+            </div>
+
+            <!-- Slide 06 -->
+            <div class="slide-panel">
+              <div class="slide-info">
+                <div class="slide-info-meta">
+                  <span class="agency-pill-badge active" data-en="System 06" data-ar="النظام 06">System 06</span>
+                  <span class="agency-pill-badge" data-en="Digital Fabrication" data-ar="تصنيع رقمي">Digital Fabrication</span>
+                </div>
+                <h3 data-en="Bespoke Moulding &amp; 5-Axis CNC Tooling" data-ar="الهندسة وتصنيع القوالب المخصصة">Bespoke Moulding &amp; 5-Axis CNC Tooling</h3>
+                <p data-en="Turnkey digital tooling pipeline utilizing large-format 5-axis CNC machining centers to mill master plugs, multi-part split moulds, and structural prototypes directly from client CAD/BIM architectural datasets." data-ar="خط تصنيع رقمي متكامل باستخدام ماكينات CNC خماسية المحاور لإنتاج قوالب رئيسية معقدة ونماذج معمارية مخصصة مباشرة من مخططات BIM.">Turnkey digital tooling pipeline utilizing large-format 5-axis CNC machining centers to mill master plugs, multi-part split moulds, and structural prototypes directly from client CAD/BIM architectural datasets.</p>
+                <div class="slide-specs-grid">
+                  <div class="slide-spec-box">
+                    <small data-en="CNC Accuracy" data-ar="دقة التصنيع">CNC Accuracy</small>
+                    <strong>&plusmn;0.2 mm Tooling</strong>
+                  </div>
+                  <div class="slide-spec-box">
+                    <small data-en="Resin Formulations" data-ar="تركيب الراتنج">Resin Formulations</small>
+                    <strong>Vinylester / Epoxy</strong>
+                  </div>
+                  <div class="slide-spec-box">
+                    <small data-en="Delivery Model" data-ar="نموذج التنفيذ">Delivery Model</small>
+                    <strong>Turnkey In-House</strong>
+                  </div>
+                </div>
+                <a class="btn" href="product-detail.html?id=grp-custom-fabrication" data-en="Inspect Tooling Capabilities ↗" data-ar="استعراض قدرات القوالب ↗">Inspect Tooling Capabilities ↗</a>
+              </div>
+              <div class="slide-visual-box">
+                <span class="slide-visual-tag">SLIDE 06 / BESPOKE</span>
+                <img src="assets/images/prod-custom.jpg" alt="Custom GRP Fabrications and Tooling">
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide Selector Navigation Tabs Bar -->
+          <div class="slide-tabs-bar">
+            <button class="slide-tab-btn active"><span>01</span> <span data-en="Cladding" data-ar="التكسيات">Cladding</span></button>
+            <button class="slide-tab-btn"><span>02</span> <span data-en="Columns" data-ar="الأعمدة">Columns</span></button>
+            <button class="slide-tab-btn"><span>03</span> <span data-en="3D Facades" data-ar="الواجهات 3D">3D Facades</span></button>
+            <button class="slide-tab-btn"><span>04</span> <span data-en="Underpass" data-ar="الأنفاق">Underpass</span></button>
+            <button class="slide-tab-btn"><span>05</span> <span data-en="Water Tanks" data-ar="الخزانات">Water Tanks</span></button>
+            <button class="slide-tab-btn"><span>06</span> <span data-en="Bespoke Tooling" data-ar="القوالب المخصصة">Bespoke Tooling</span></button>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Ticker Marquee -->
+    <!-- Infinite Certification & Capability Marquee -->
     <div class="ticker" aria-hidden="true">
       <div class="ticker-track">
-        <span>GRP Architectural Cladding <b>✳</b> Interlocking Column Covers <b>✳</b> 3D Parametric Facades <b>✳</b> Mashrabiya Solar Screens <b>✳</b> Underpass Wall Linings <b>✳</b> Sectional Water Tanks <b>✳</b> Custom CNC Mouldings <b>✳</b> Heavy Duty Gratings <b>✳</b></span>
-        <span>GRP Architectural Cladding <b>✳</b> Interlocking Column Covers <b>✳</b> 3D Parametric Facades <b>✳</b> Mashrabiya Solar Screens <b>✳</b> Underpass Wall Linings <b>✳</b> Sectional Water Tanks <b>✳</b> Custom CNC Mouldings <b>✳</b> Heavy Duty Gratings <b>✳</b></span>
+        <span>ISO 9001:2015 CERTIFIED <b>✳</b> ASTM E84 CLASS A FLAME SPREAD <b>✳</b> SASO COMPLIANT <b>✳</b> WRAS POTABLE WATER TESTED <b>✳</b> SAUDI ARAMCO COMPLIANT <b>✳</b> 75% DEAD-LOAD REDUCTION <b>✳</b> BARCOL 45-50 HARDNESS <b>✳</b> RIYADH PRODUCED <b>✳</b></span>
+        <span>ISO 9001:2015 CERTIFIED <b>✳</b> ASTM E84 CLASS A FLAME SPREAD <b>✳</b> SASO COMPLIANT <b>✳</b> WRAS POTABLE WATER TESTED <b>✳</b> SAUDI ARAMCO COMPLIANT <b>✳</b> 75% DEAD-LOAD REDUCTION <b>✳</b> BARCOL 45-50 HARDNESS <b>✳</b> RIYADH PRODUCED <b>✳</b></span>
       </div>
     </div>
 
-    <!-- Key Engineering Metrics Strip (Matching Reference) -->
+    <!-- Key Engineering Metrics Strip with Animated Counters -->
     <section class="metrics-strip">
       <div class="wrap metrics-grid">
         <div class="metric-col reveal visible">
-          <div class="metric-num">250+</div>
-          <div class="metric-title" data-en="Commercial Projects" data-ar="مشروع تجاري منفذ">Commercial Projects</div>
+          <div class="metric-num" data-target="250" data-suffix="+">250+</div>
+          <div class="metric-title" data-en="Commercial Projects Delivered" data-ar="مشروع تجاري منفذ بالمملكة">Commercial Projects Delivered</div>
         </div>
         <div class="metric-col reveal visible">
-          <div class="metric-num">75%</div>
-          <div class="metric-title" data-en="Lighter Than Concrete" data-ar="أخف وزناً من الخرسانة">Lighter Than Concrete</div>
+          <div class="metric-num" data-target="75" data-suffix="%">75%</div>
+          <div class="metric-title" data-en="Lighter Than Concrete" data-ar="أخف وزناً من الخرسانة المسبقة">Lighter Than Concrete</div>
         </div>
         <div class="metric-col reveal visible">
           <div class="metric-num">Class A</div>
-          <div class="metric-title" data-en="Tested Flame Spread Rating" data-ar="مقاومة حريق معتمدة فئة A">Tested Flame Spread Rating</div>
+          <div class="metric-title" data-en="ASTM E84 Flame Spread Rating" data-ar="مقاومة حريق معتمدة فئة A">ASTM E84 Flame Spread Rating</div>
         </div>
         <div class="metric-col reveal visible">
-          <div class="metric-num">100%</div>
+          <div class="metric-num" data-target="100" data-suffix="%">100%</div>
           <div class="metric-title" data-en="Non-Corrosive Desert Grade" data-ar="مقاوم للتآكل ومناخ الصحراء">Non-Corrosive Desert Grade</div>
         </div>
       </div>
@@ -294,22 +555,94 @@
       </div>
     </section>
 
-    <!-- Manufacturing Workflow Band -->
-    <section class="band">
-      <div class="wrap band-grid">
-        <div class="reveal">
-          <div class="eyebrow" data-en="Quality Control & Tooling" data-ar="مراقبة الجودة وتصنيع القوالب">Quality Control & Tooling</div>
-          <h2 data-en="End-to-End Composite<br>Manufacturing Precision." data-ar="دقة تصنيع هندسية متكاملة<br>من الفكرة إلى التركيب.">End-to-End Composite<br>Manufacturing Precision.</h2>
-          <p data-en="From structural CAD/BIM finite-element analysis and precision tooling to automated resin dosing, curing ovens, and Barcol hardness verification." data-ar="من التحليل الإنشائي ثلاثي الأبعاد وتصنيع القوالب حتى حقن الراتنج الدقيق وأفران المعالجة الحرارية وفحص صلادة باركول واختبارات الجودة.">From structural CAD/BIM finite-element analysis and precision tooling to automated resin dosing, curing ovens, and Barcol hardness verification.</p>
-          <a href="manufacturing.html" class="btn" data-en="Explore Riyadh Factory Workflow ↗" data-ar="استعراض مراحل التصنيع بالرياض ↗">Explore Riyadh Factory Workflow ↗</a>
+    <!-- Methodology & Manufacturing Workflow (La Boîte à Slides 4-Step Process Grid) -->
+    <section class="section" style="background: var(--paper-card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="kicker" data-en="Engineering Methodology & Quality Control" data-ar="منهجية الهندسة وضبط الجودة">Engineering Methodology & Quality Control</div>
+            <h2 data-en="A certified, end-to-end composite<br>manufacturing protocol." data-ar="بروتوكول تصنيع هندسي متكامل<br>ومعتمد وفق أعلى المقاييس.">A certified, end-to-end composite<br>manufacturing protocol.</h2>
+          </div>
+          <p data-en="Our Riyadh manufacturing protocol unites digital engineering with automated resin chemistry and certified laboratory testing, guaranteeing every panel meets Saudi Building Codes." data-ar="يجمع بروتوكول التصنيع في مصنعنا بالرياض بين النمذجة الرقمية وحقن الراتنج الآلي والاختبارات المخبرية المعتمدة لضمان مطابقة كل لوح لكود البناء السعودي.">Our Riyadh manufacturing protocol unites digital engineering with automated resin chemistry and certified laboratory testing, guaranteeing every panel meets Saudi Building Codes.</p>
         </div>
-        <div class="capabilities reveal">
-          <div class="cap"><i>↗</i> <span data-en="5-Axis CNC Pattern Machining" data-ar="قص القوالب بالـ CNC خماسي المحاور">5-Axis CNC Pattern Machining</span></div>
-          <div class="cap"><i>↗</i> <span data-en="Vacuum Infusion & RTM Light" data-ar="حقن الراتنج بالتفريغ RTM">Vacuum Infusion & RTM Light</span></div>
-          <div class="cap"><i>↗</i> <span data-en="Isophthalic UV Gelcoat Chemistry" data-ar="أنظمة جل كوت مقاومة للشمس">Isophthalic UV Gelcoat Chemistry</span></div>
-          <div class="cap"><i>↗</i> <span data-en="Fire Retardant Class 1 Formulations" data-ar="تركيبات مقاومة للحريق فئة 1">Fire Retardant Class 1 Formulations</span></div>
-          <div class="cap"><i>↗</i> <span data-en="Barcol Hardness & Tensile Lab Audits" data-ar="مختبر فحص الشد والصلادة">Barcol Hardness & Tensile Lab Audits</span></div>
-          <div class="cap"><i>↗</i> <span data-en="Concealed Subframe Bracket Design" data-ar="تصميم مرابط التثبيت المخفية">Concealed Subframe Bracket Design</span></div>
+
+        <div class="method-grid">
+          <!-- Step 01 -->
+          <div class="method-card reveal reveal-delay-1">
+            <div>
+              <div class="method-header">
+                <span class="method-num">01</span>
+                <div class="method-icon-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                    <line x1="9" y1="21" x2="9" y2="9"></line>
+                  </svg>
+                </div>
+              </div>
+              <h3 data-en="BIM &amp; FEA Engineering" data-ar="النمذجة الهندسية والتحليل الإنشائي">BIM &amp; FEA Engineering</h3>
+              <p data-en="Direct translation of architectural concepts into structural finite-element simulation, determining laminate thicknesses, joint tolerances, and wind load reactions." data-ar="تحويل الرؤى المعمارية إلى نماذج محاكاة رقمية دقيقة لتحديد سماكات الألياف ومقاومة ضغط الرياح والتمدد الحراري.">Direct translation of architectural concepts into structural finite-element simulation, determining laminate thicknesses, joint tolerances, and wind load reactions.</p>
+            </div>
+            <div style="margin-top: 20px; font-size: 11px; font-weight: 700; color: var(--orange);" data-en="PHASE 01: DIGITAL SPECIFICATION" data-ar="المرحلة 01: التوصيف الرقمي">PHASE 01: DIGITAL SPECIFICATION</div>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="method-card reveal reveal-delay-2">
+            <div>
+              <div class="method-header">
+                <span class="method-num">02</span>
+                <div class="method-icon-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 data-en="5-Axis CNC Master Tooling" data-ar="تصنيع القوالب خماسي المحاور">5-Axis CNC Master Tooling</h3>
+              <p data-en="Precision pattern milling with high-density polyurethane blocks ensuring sub-millimeter geometric accuracy (&plusmn;0.2mm) for complex double-curved architectural geometries." data-ar="خراطة وقص القوالب الرئيسية بدقة متناهية (&plusmn;0.2 مم) باستخدام ماكينات CNC خماسية المحاور لإنتاج أعقد الأشكال المنحنية.">Precision pattern milling with high-density polyurethane blocks ensuring sub-millimeter geometric accuracy (&plusmn;0.2mm) for complex double-curved architectural geometries.</p>
+            </div>
+            <div style="margin-top: 20px; font-size: 11px; font-weight: 700; color: var(--orange);" data-en="PHASE 02: PATTERN FABRICATION" data-ar="المرحلة 02: تصنيع القوالب">PHASE 02: PATTERN FABRICATION</div>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="method-card reveal reveal-delay-3">
+            <div>
+              <div class="method-header">
+                <span class="method-num">03</span>
+                <div class="method-icon-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 data-en="Infusion &amp; UV Chemistry" data-ar="حقن الراتنج والجل كوت المطور">Infusion &amp; UV Chemistry</h3>
+              <p data-en="Closed-mould vacuum infusion coupled with high-durability isophthalic UV-stabilized gelcoats, eliminating voids and delivering exceptional fire retardancy (ASTM E84 Class 1)." data-ar="حقن الراتنج في قوالب مغلقة تحت التفريغ مع طبقات جل كوت معالجة ضد الأشعة فوق البنفسجية ومقاومة للحريق فئة 1.">Closed-mould vacuum infusion coupled with high-durability isophthalic UV-stabilized gelcoats, eliminating voids and delivering exceptional fire retardancy (ASTM E84 Class 1).</p>
+            </div>
+            <div style="margin-top: 20px; font-size: 11px; font-weight: 700; color: var(--orange);" data-en="PHASE 03: POLYMER CURING" data-ar="المرحلة 03: المعالجة الكيميائية">PHASE 03: POLYMER CURING</div>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="method-card reveal reveal-delay-4">
+            <div>
+              <div class="method-header">
+                <span class="method-num">04</span>
+                <div class="method-icon-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <h3 data-en="Lab Audits &amp; Assembly" data-ar="الفحص المخبري والتركيب">Lab Audits &amp; Assembly</h3>
+              <p data-en="Batch-level tensile testing, Barcol hardness audits (45-50 scale), and complete concealed subframe bracket dry-fit prior to dispatched installation across the Kingdom." data-ar="فحوصات مخبرية للشد والصلادة لكل دفعة إنتاج، وتجربة تركيب الهياكل المعدنية المخفية قبل الشحن لموقع المشروع.">Batch-level tensile testing, Barcol hardness audits (45-50 scale), and complete concealed subframe bracket dry-fit prior to dispatched installation across the Kingdom.</p>
+            </div>
+            <div style="margin-top: 20px; font-size: 11px; font-weight: 700; color: var(--orange);" data-en="PHASE 04: QUALITY CERTIFICATION" data-ar="المرحلة 04: شهادة الاعتماد">PHASE 04: QUALITY CERTIFICATION</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;">
+          <a href="manufacturing.html" class="btn" data-en="Explore Riyadh Factory Workflow ↗" data-ar="استعراض مراحل التصنيع بالرياض ↗">Explore Riyadh Factory Workflow ↗</a>
+          <a href="quote.html" class="btn secondary" data-en="Configure Project Specifications ↗" data-ar="تحديد مواصفات المشروع ↗">Configure Project Specifications ↗</a>
         </div>
       </div>
     </section>

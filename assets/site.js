@@ -128,4 +128,144 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 500);
     });
   });
+
+  // 7. Interactive Slide Deck Engine (La Boîte à Slides Presentation Feature)
+  initSlideDeck();
+
+  // 8. Animated Metrics Counter
+  initAnimatedCounters();
 });
+
+/**
+ * Presentation Slide Deck Controller
+ */
+function initSlideDeck() {
+  const deck = document.querySelector('[data-slide-deck]');
+  if (!deck) return;
+
+  const panels = deck.querySelectorAll('.slide-panel');
+  const tabs = deck.querySelectorAll('.slide-tab-btn');
+  const prevBtn = deck.querySelector('[data-slide-prev]');
+  const nextBtn = deck.querySelector('[data-slide-next]');
+  const counterCurrent = deck.querySelector('[data-slide-current]');
+  const progressFill = deck.querySelector('.slide-progress-fill');
+  
+  if (!panels.length) return;
+
+  let currentIndex = 0;
+  const totalSlides = panels.length;
+  let autoplayTimer = null;
+
+  function goToSlide(index) {
+    if (index < 0) index = totalSlides - 1;
+    if (index >= totalSlides) index = 0;
+    currentIndex = index;
+
+    panels.forEach((p, i) => {
+      p.classList.toggle('active', i === currentIndex);
+    });
+
+    tabs.forEach((t, i) => {
+      t.classList.toggle('active', i === currentIndex);
+    });
+
+    if (counterCurrent) {
+      counterCurrent.textContent = String(currentIndex + 1).padStart(2, '0');
+    }
+
+    if (progressFill) {
+      const percentage = ((currentIndex + 1) / totalSlides) * 100;
+      progressFill.style.width = `${percentage}%`;
+    }
+  }
+
+  // Next / Prev listeners
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      goToSlide(currentIndex - 1);
+      resetAutoplay();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      goToSlide(currentIndex + 1);
+      resetAutoplay();
+    });
+  }
+
+  // Tab button click
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => {
+      goToSlide(i);
+      resetAutoplay();
+    });
+  });
+
+  // Autoplay functionality
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(() => {
+      goToSlide(currentIndex + 1);
+    }, 6500);
+  }
+
+  function stopAutoplay() {
+    if (autoplayTimer) clearInterval(autoplayTimer);
+  }
+
+  function resetAutoplay() {
+    stopAutoplay();
+    startAutoplay();
+  }
+
+  deck.addEventListener('mouseenter', stopAutoplay);
+  deck.addEventListener('mouseleave', startAutoplay);
+
+  // Initialize first slide
+  goToSlide(0);
+  startAutoplay();
+}
+
+/**
+ * Animated Counter Numbers on Scroll
+ */
+function initAnimatedCounters() {
+  const metricNumbers = document.querySelectorAll('.metric-num[data-target]');
+  if (!metricNumbers.length) return;
+
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.getAttribute('data-target'), 10);
+        const prefix = el.getAttribute('data-prefix') || '';
+        const suffix = el.getAttribute('data-suffix') || '';
+        const duration = 1800;
+        const start = 0;
+        const startTime = performance.now();
+
+        function updateCount(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease out cubic
+          const easeProgress = 1 - Math.pow(1 - progress, 3);
+          const currentCount = Math.floor(easeProgress * (target - start) + start);
+          
+          el.textContent = `${prefix}${currentCount}${suffix}`;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCount);
+          } else {
+            el.textContent = `${prefix}${target}${suffix}`;
+          }
+        }
+
+        requestAnimationFrame(updateCount);
+        countObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  metricNumbers.forEach(el => countObserver.observe(el));
+}
